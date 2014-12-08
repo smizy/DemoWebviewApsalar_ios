@@ -6,7 +6,7 @@ A demo webview iOS app integrating Apsalar SDK
 Refer to:
 http://support.apsalar.com/customer/portal/articles/772167
 
-1. Before event tracking in webview, You need to integerate Apsalar Android SDK.
+1. Before event tracking in webview, You need to integerate Apsalar iOS SDK.
 
  Refer to:
  http://support.apsalar.com/customer/portal/articles/717510

@@ -17,6 +17,12 @@ DerivedData
 *.ipa
 *.xcuserstate
 
+# added
+Apsalar.h
+Apsalar.js
+libApsalar.a
+.DS_Store
+
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However

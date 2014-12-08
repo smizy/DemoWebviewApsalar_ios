@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="Apsalar.js"></script>
+    
+<script>
+    function _id(id) {
+        return document.getElementById(id);
+    }
+function _val(id) {
+    return _id(id).value;
+}
+function event_revenue(pk, pn, pp, pq, r) {
+    return Apsalar.event('__iap__', {
+                         'ps': '<API KEY>',
+                         'pcc': 'JPY',
+                         'pk': pk,
+                         'pn': pn,
+                         'pp': pp,
+                         'pq': pq,
+                         'r': r
+                         });
+}
+function dobuy() {
+    if (!confirm("購入しますか?")) {
+        return;
+    }
+    _id('buy').style.display = "none";
+    event_revenue(_val('pk'), _val('pn'), _val('pp'), _val('pq'), _val('r') );
+    location.href="local://a/thanks.html";
+}
+
+</script>
+</head>
+
+<body>
+<h1>レベル2</h1>
+<dl>
+<dt>SKU</dt><dd><input type="text" id="pk" value="sku_01"></dd>
+<dt>商品名</dt><dd><input type="text" id="pn" value="pid_01"></dd>
+<dt>単価</dt><dd><input type="text" id="pp" value="100"></dd>
+<dt>個数</dt><dd><input type="text" id="pq" value="2"></dd>
+<dt>合計</dt><dd><input type="text" id="r" value="200"></dd>
+</dl>
+<button id="buy" onclick="dobuy();">
+    購入する
+</button>
+
+<p id="msg">
+</p>
+</body>
+</html>

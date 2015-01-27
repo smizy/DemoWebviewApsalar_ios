@@ -37,7 +37,7 @@ class MainController: UITableViewController, UIWebViewDelegate {
 
     }
     
-    func webView(view: UIWebView!, shouldStartLoadWithRequest request: NSURLRequest!, navigationType: UIWebViewNavigationType) -> Bool {
+    func webView(view: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
    
         let url = request.URL
         let ext = url.pathExtension
@@ -51,6 +51,20 @@ class MainController: UITableViewController, UIWebViewDelegate {
             }
             return false
         }
+        // println(url)
+        // println(":shouldStartLoading:" + view.stringByEvaluatingJavaScriptFromString("typeof(Apsalar)")! )
+        
+        if Apsalar.processJSRequest(view, withURL:request) {
+            // if processJSRequest handled this request it will return TRUE so
+            // return NO (should not start load with request)
+            return false;
+        }
+        return true
+    }
+    
+    func webViewDidFinishLoad(view: UIWebView) {
+        // println("webViewDidFinishLoad:" + view.stringByEvaluatingJavaScriptFromString("typeof(Apsalar)")! )
+        
         if view.stringByEvaluatingJavaScriptFromString("typeof(Apsalar)") == "undefined"  {
             // Inject Apsalar.JS in to the HTMLs
             if let path = NSBundle.mainBundle().pathForResource("Apsalar", ofType: "js") {
@@ -58,12 +72,7 @@ class MainController: UITableViewController, UIWebViewDelegate {
                     view.stringByEvaluatingJavaScriptFromString(possibleContent)
                 }
             }
-        } else if Apsalar.processJSRequest(view, withURL:request) {
-            // if processJSRequest handled this request it will return TRUE so
-            // return NO (should not start load with request)
-            return false;
         }
-        return true
     }
     
     

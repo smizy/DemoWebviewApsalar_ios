@@ -2,8 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <script type="text/javascript" src="Apsalar.js"></script>
-    
+
 <script>
     function _id(id) {
         return document.getElementById(id);
@@ -12,6 +11,9 @@ function _val(id) {
     return _id(id).value;
 }
 function event_revenue(pk, pn, pp, pq, r) {
+    try {
+        
+    
     return Apsalar.event('__iap__', {
                          'ps': '<API KEY>',
                          'pcc': 'JPY',
@@ -21,6 +23,11 @@ function event_revenue(pk, pn, pp, pq, r) {
                          'pq': pq,
                          'r': r
                          });
+                         
+    } catch (e) {
+        alert(e);
+        return false;
+    }
 }
 function dobuy() {
     if (!confirm("購入しますか?")) {

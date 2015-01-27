@@ -2,14 +2,11 @@
 <html>
 <head>
  <meta charset="UTF-8" />
-<script type="text/javascript" src="Apsalar.js"></script>
-
-</script>
 </head>
 
 <body>
 <h1>レベル1</h1>
-<a onclick="Apsalar.event('level_2', {param1: 'foo', param2: 'bar'});" href="local://a/level2.html">
+<a onclick="try { Apsalar.event('level_2', {param1: 'foo', param2: 'bar'}); } catch (e) { alert(e); return false; } " href="local://a/level2.html">
     レベル2に進む
 </a>
 </body>

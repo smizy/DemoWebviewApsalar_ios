@@ -4,17 +4,20 @@
     <meta charset="UTF-8" />
 
 <script>
-    function _id(id) {
-        return document.getElementById(id);
-    }
+    
+function _id(id) {
+    return document.getElementById(id);
+}
+
 function _val(id) {
     return _id(id).value;
 }
+
 function event_revenue(pk, pn, pp, pq, r) {
     try {
         
     
-    return Apsalar.event('__iap__', {
+        return Apsalar.event('__iap__', {
                          'ps': '<API KEY>',
                          'pcc': 'JPY',
                          'pk': pk,
@@ -29,6 +32,7 @@ function event_revenue(pk, pn, pp, pq, r) {
         return false;
     }
 }
+
 function dobuy() {
     if (!confirm("購入しますか?")) {
         return;
@@ -37,6 +41,15 @@ function dobuy() {
     event_revenue(_val('pk'), _val('pn'), _val('pp'), _val('pq'), _val('r') );
     location.href="local://a/thanks.html";
 }
+
+// >>>>Apsalar object lost<<<<<<
+window.addEventListener('load',function() {
+                        try {
+                        Apsalar.event('hoge');
+                        } catch (e) {
+                        alert(e);
+                        }
+}, false);
 
 </script>
 </head>

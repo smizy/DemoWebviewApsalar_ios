@@ -51,19 +51,8 @@ class MainController: UITableViewController, UIWebViewDelegate {
             }
             return false
         }
-        // println(url)
-        // println(":shouldStartLoading:" + view.stringByEvaluatingJavaScriptFromString("typeof(Apsalar)")! )
-        
-        if Apsalar.processJSRequest(view, withURL:request) {
-            // if processJSRequest handled this request it will return TRUE so
-            // return NO (should not start load with request)
-            return false;
-        }
-        return true
-    }
-    
-    func webViewDidFinishLoad(view: UIWebView) {
-        // println("webViewDidFinishLoad:" + view.stringByEvaluatingJavaScriptFromString("typeof(Apsalar)")! )
+        println(url)
+        println("shouldStartLoading:" + view.stringByEvaluatingJavaScriptFromString("typeof(Apsalar)")! )
         
         if view.stringByEvaluatingJavaScriptFromString("typeof(Apsalar)") == "undefined"  {
             // Inject Apsalar.JS in to the HTMLs
@@ -73,6 +62,25 @@ class MainController: UITableViewController, UIWebViewDelegate {
                 }
             }
         }
+        if Apsalar.processJSRequest(view, withURL:request) {
+            // if processJSRequest handled this request it will return TRUE so
+            // return NO (should not start load with request)
+            return false;
+        }
+        return true
+    }
+    
+    func webViewDidFinishLoad(view: UIWebView) {
+        println("webViewDidFinishLoad:" + view.stringByEvaluatingJavaScriptFromString("typeof(Apsalar)")! )
+        
+//        if view.stringByEvaluatingJavaScriptFromString("typeof(Apsalar)") == "undefined"  {
+//            // Inject Apsalar.JS in to the HTMLs
+//            if let path = NSBundle.mainBundle().pathForResource("Apsalar", ofType: "js") {
+//                if let possibleContent = String(contentsOfFile:path, usedEncoding: nil, error: nil) {
+//                    view.stringByEvaluatingJavaScriptFromString(possibleContent)
+//                }
+//            }
+//        }
     }
     
     

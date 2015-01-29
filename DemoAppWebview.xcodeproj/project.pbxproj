@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4200111F1A7641B9005E4F50 /* Apsalar.js in Resources */ = {isa = PBXBuildFile; fileRef = 4200111D1A7641B9005E4F50 /* Apsalar.js */; };
-		420011201A7641B9005E4F50 /* libApsalar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4200111E1A7641B9005E4F50 /* libApsalar.a */; };
 		4209FFC91A15FC250006C695 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4209FFC81A15FC250006C695 /* libsqlite3.0.dylib */; };
 		4209FFCB1A15FC300006C695 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4209FFCA1A15FC300006C695 /* SystemConfiguration.framework */; };
 		4209FFCD1A15FC390006C695 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4209FFCC1A15FC390006C695 /* Security.framework */; };
@@ -24,8 +22,9 @@
 		424B84B61A15959B00A27E23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 424B84B51A15959B00A27E23 /* Images.xcassets */; };
 		424B84B91A15959B00A27E23 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 424B84B71A15959B00A27E23 /* LaunchScreen.xib */; };
 		424B84C51A15959B00A27E23 /* DemoAppWebviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B84C41A15959B00A27E23 /* DemoAppWebviewTests.swift */; };
+		425078BB1A79C135007E3A29 /* Apsalar.js in Resources */ = {isa = PBXBuildFile; fileRef = 425078B91A79C135007E3A29 /* Apsalar.js */; };
+		425078BC1A79C135007E3A29 /* libApsalar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 425078BA1A79C135007E3A29 /* libApsalar.a */; };
 		4276C9D51A771F6200167482 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 420011211A7641DD005E4F50 /* iAd.framework */; };
-		4294C9BA1A5A5F5E00D1F8BB /* apsalar_tracking.js in Resources */ = {isa = PBXBuildFile; fileRef = 4294C9B91A5A5F5E00D1F8BB /* apsalar_tracking.js */; };
 		42B294BC1A15A55D00C45734 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B294BB1A15A55D00C45734 /* MainController.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,9 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4200111C1A7641B9005E4F50 /* Apsalar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Apsalar.h; sourceTree = "<group>"; };
-		4200111D1A7641B9005E4F50 /* Apsalar.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Apsalar.js; sourceTree = "<group>"; };
-		4200111E1A7641B9005E4F50 /* libApsalar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libApsalar.a; sourceTree = "<group>"; };
 		420011211A7641DD005E4F50 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		4209FFC81A15FC250006C695 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		4209FFCA1A15FC300006C695 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -64,7 +60,9 @@
 		424B84BE1A15959B00A27E23 /* DemoAppWebviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppWebviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		424B84C31A15959B00A27E23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		424B84C41A15959B00A27E23 /* DemoAppWebviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppWebviewTests.swift; sourceTree = "<group>"; };
-		4294C9B91A5A5F5E00D1F8BB /* apsalar_tracking.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = apsalar_tracking.js; sourceTree = "<group>"; };
+		425078B81A79C135007E3A29 /* Apsalar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Apsalar.h; sourceTree = "<group>"; };
+		425078B91A79C135007E3A29 /* Apsalar.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Apsalar.js; sourceTree = "<group>"; };
+		425078BA1A79C135007E3A29 /* libApsalar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libApsalar.a; sourceTree = "<group>"; };
 		42B294BB1A15A55D00C45734 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainController.swift; path = ../MainController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,8 +74,8 @@
 				4276C9D51A771F6200167482 /* iAd.framework in Frameworks */,
 				4209FFD11A15FC590006C695 /* AdSupport.framework in Frameworks */,
 				4209FFCF1A15FC420006C695 /* libz.dylib in Frameworks */,
-				420011201A7641B9005E4F50 /* libApsalar.a in Frameworks */,
 				4209FFCD1A15FC390006C695 /* Security.framework in Frameworks */,
+				425078BC1A79C135007E3A29 /* libApsalar.a in Frameworks */,
 				4209FFCB1A15FC300006C695 /* SystemConfiguration.framework in Frameworks */,
 				4209FFC91A15FC250006C695 /* libsqlite3.0.dylib in Frameworks */,
 			);
@@ -96,17 +94,16 @@
 		424B849D1A15959B00A27E23 = {
 			isa = PBXGroup;
 			children = (
+				425078B81A79C135007E3A29 /* Apsalar.h */,
+				425078B91A79C135007E3A29 /* Apsalar.js */,
+				425078BA1A79C135007E3A29 /* libApsalar.a */,
 				420011211A7641DD005E4F50 /* iAd.framework */,
-				4200111C1A7641B9005E4F50 /* Apsalar.h */,
-				4200111D1A7641B9005E4F50 /* Apsalar.js */,
-				4200111E1A7641B9005E4F50 /* libApsalar.a */,
 				4209FFD21A15FD9A0006C695 /* DemoAppWebview-Bridging-Header.h */,
 				4209FFD01A15FC590006C695 /* AdSupport.framework */,
 				4209FFCE1A15FC420006C695 /* libz.dylib */,
 				4209FFCC1A15FC390006C695 /* Security.framework */,
 				4209FFCA1A15FC300006C695 /* SystemConfiguration.framework */,
 				4209FFC81A15FC250006C695 /* libsqlite3.0.dylib */,
-				4294C9B91A5A5F5E00D1F8BB /* apsalar_tracking.js */,
 				4238D66F1A2829AC00ABE679 /* index.html */,
 				4238D6731A284A2F00ABE679 /* level2.html */,
 				4238D6751A2866DB00ABE679 /* thanks.html */,
@@ -246,10 +243,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4238D6701A2829AC00ABE679 /* index.html in Resources */,
-				4200111F1A7641B9005E4F50 /* Apsalar.js in Resources */,
+				425078BB1A79C135007E3A29 /* Apsalar.js in Resources */,
 				424B84B41A15959B00A27E23 /* Main.storyboard in Resources */,
 				424B84B91A15959B00A27E23 /* LaunchScreen.xib in Resources */,
-				4294C9BA1A5A5F5E00D1F8BB /* apsalar_tracking.js in Resources */,
 				424B84B61A15959B00A27E23 /* Images.xcassets in Resources */,
 				4238D6741A284A2F00ABE679 /* level2.html in Resources */,
 				4238D6761A2866DB00ABE679 /* thanks.html in Resources */,

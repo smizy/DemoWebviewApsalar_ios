@@ -43,13 +43,17 @@ function dobuy() {
 }
 
 // >>>>Apsalar object lost<<<<<<
-window.addEventListener('load',function() {
-                        try {
-                        Apsalar.event('hoge');
-                        } catch (e) {
-                        alert(e);
-                        }
+//   window.addEventListener('load',
+
+document.addEventListener('apsalarCreated', function(e) {
+    try {
+        alert(typeof(Apsalar));
+        Apsalar.event('hoge');
+    } catch (e) {
+        alert(e);
+    }
 }, false);
+
 
 </script>
 </head>
